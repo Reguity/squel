@@ -24,13 +24,13 @@ function _extend (dst, ...sources) {
 
 // get whether object is a plain object
 function _isPlainObject(obj) {
-  return (obj && obj.constructor.prototype === Object.prototype);
+  return Object.getPrototypeOf(obj) === Object.prototype;
 };
 
 
 // get whether object is an array
 function _isArray(obj) {
-  return (obj && obj.constructor.prototype === Array.prototype);
+  return Array.isArray(obj);
 };
 
 
